@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->withPersonalPortal()->create([
             'name' => 'ADMIN',
+            'password' => 'password',
             'email' => 'admin@politicalflow.com.br',
         ]);
     }

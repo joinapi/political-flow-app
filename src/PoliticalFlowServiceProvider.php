@@ -82,19 +82,19 @@ class PoliticalFlowServiceProvider extends ServiceProvider
             __DIR__ . '/../lang' => lang_path('vendor/political-flow'),
         ], 'political-flow-translations');
 
-        $this->publishes([
+        $this->publishesMigrations([
             __DIR__ . '/../database/migrations/0001_01_01_000000_create_users_table.php' => database_path('migrations/0001_01_01_000000_create_users_table.php'),
-        ], 'political-flow-migrations');
+        ], 'political-flow-migrations-base');
 
         $this->publishesMigrations([
-            __DIR__ . '/../database/migrations/2020_05_21_100000_create_political_table.php' => database_path('migrations/2020_05_21_100000_create_politicals_table.php'),
+            __DIR__ . '/../database/migrations/2020_05_21_100000_create_politicals_table.php' => database_path('migrations/2020_05_21_100000_create_politicals_table.php'),
             __DIR__ . '/../database/migrations/2020_05_21_200000_create_political_user_table.php' => database_path('migrations/2020_05_21_200000_create_political_user_table.php'),
             __DIR__ . '/../database/migrations/2020_05_21_300000_create_political_invitations_table.php' => database_path('migrations/2020_05_21_300000_create_political_invitations_table.php'),
-        ], 'political-flow-political-migrations');
+        ], 'political-flow-migrations-biz');
 
         $this->publishesMigrations([
             __DIR__ . '/../database/migrations/2020_12_22_000000_create_connected_accounts_table.php' => database_path('migrations/2020_12_22_000000_create_connected_accounts_table.php'),
-        ], 'political-flow-socialite-migrations');
+        ], 'political-flow-migrations-socialite');
     }
 
     /**

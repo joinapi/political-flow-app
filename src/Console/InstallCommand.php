@@ -114,12 +114,22 @@ class InstallCommand extends Command
 
         // Publish...
         $this->callSilent('vendor:publish', [
-            '--tag' => 'political-flow-migrations',
+            '--tag' => 'political-flow-migrations-base',
             '--force' => true,
         ]);
 
         $this->callSilent('vendor:publish', [
-            '--tag' => 'political-flow-political-migrations',
+            '--tag' => 'political-flow-migrations-biz',
+            '--force' => true,
+        ]);
+
+        $this->callSilent('vendor:publish', [
+            '--tag' => 'political-flow-migrations-biz',
+            '--force' => true,
+        ]);
+
+        $this->callSilent('vendor:publish', [
+            '--tag' => 'political-flow-migrations-socialite',
             '--force' => true,
         ]);
 

@@ -128,12 +128,12 @@ class PoliticalFlowWithSocialiteServiceProvider extends PanelProvider
         PoliticalFlow::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         PoliticalFlow::updateUserPasswordsUsing(UpdateUserPassword::class);
 
-        PoliticalFlow::createPoliticalsUsing(CreatePolitical::class);
+        PoliticalFlow::createPoliticalUsing(CreatePolitical::class);
         PoliticalFlow::updatePoliticalNamesUsing(UpdatePoliticalName::class);
         PoliticalFlow::addPoliticalEmployeesUsing(AddPoliticalEmployee::class);
         PoliticalFlow::invitePoliticalEmployeesUsing(InvitePoliticalEmployee::class);
         PoliticalFlow::removePoliticalEmployeesUsing(RemovePoliticalEmployee::class);
-        PoliticalFlow::deletePoliticalsUsing(DeletePolitical::class);
+        PoliticalFlow::deletePoliticalUsing(DeletePolitical::class);
         PoliticalFlow::deleteUsersUsing(DeleteUser::class);
 
         PoliticalFlow::resolvesSocialiteUsersUsing(ResolveSocialiteUser::class);
