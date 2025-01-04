@@ -20,7 +20,7 @@ class Political extends PoliticalFlowPolitical implements HasAvatar
      */
     protected $fillable = [
         'name',
-        'personal_political',
+        'personal_portal',
     ];
 
     /**
@@ -42,7 +42,7 @@ class Political extends PoliticalFlowPolitical implements HasAvatar
     protected function casts(): array
     {
         return [
-            'personal_political' => 'boolean',
+            'personal_portal' => 'boolean',
         ];
     }
 

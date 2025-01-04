@@ -23,7 +23,7 @@ class PoliticalFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->unique()->political(),
+            'name' => $this->faker->unique(),
             'user_id' => User::factory(),
             'personal_portal' => true,
         ];

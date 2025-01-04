@@ -17,7 +17,7 @@ class ValidatePoliticalDeletion
     {
         Gate::forUser($user)->authorize('delete', $political);
 
-        if ($political->personal_political) {
+        if ($political->personal_portal) {
             throw ValidationException::withMessages([
                 'political' => __('political-flows::default.errors.political_deletion'),
             ])->errorBag('deletePolitical');

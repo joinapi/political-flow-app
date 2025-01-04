@@ -22,7 +22,7 @@ return new class extends Migration
                 PoliticalFlow::hasSocialiteFeatures()
             );
             $table->rememberToken();
-            $table->foreignId('current_portal_id')->nullable();
+            $table->foreignId('current_political_id')->nullable();
             $table->foreignId('current_connected_account_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();

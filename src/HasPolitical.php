@@ -81,7 +81,7 @@ trait HasPolitical
      */
     public function personalPolitical(): mixed
     {
-        return $this->ownedPoliticals->where('personal_political', true)->first();
+        return $this->ownedPoliticals->where('personal_portal', true)->first();
     }
 
     /**

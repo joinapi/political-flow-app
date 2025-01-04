@@ -45,7 +45,7 @@ class CreateNewUser implements CreatesNewUsers
         $user->ownedPoliticals()->save(Political::forceCreate([
             'user_id' => $user->id,
             'name' => explode(' ', $user->name, 2)[0] . "'s Political",
-            'personal_political' => true,
+            'personal_portal' => true,
         ]));
     }
 }

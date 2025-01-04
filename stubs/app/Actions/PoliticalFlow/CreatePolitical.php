@@ -32,7 +32,7 @@ class CreatePolitical implements CreatesPolitical
 
         $user->switchPolitical($political = $user->ownedPoliticals()->create([
             'name' => $input['name'],
-            'personal_political' => false,
+            'personal_portal' => false,
         ]));
 
         return $political;
